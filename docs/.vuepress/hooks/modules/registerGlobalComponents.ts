@@ -1,14 +1,8 @@
+const files = require.context('../../components', true, /\.vue$/)
 const components = []
-
-try {
-  const files = require.context('../../components', true, /\.vue$/)
-  files.keys().forEach(el => {
-    components.push(files(el).default)
-  })
-} catch (error) {
-  throw(error)
-}
-
+files.keys().forEach(el => {
+  components.push(files(el).default)
+})
 
 export default (app): void => {
   components.forEach(el => {
