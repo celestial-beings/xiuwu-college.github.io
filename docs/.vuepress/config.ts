@@ -4,6 +4,7 @@ import SidebarConfig from './sidebar.config'
 import { path } from '@vuepress/utils'
 
 export default defineUserConfig<DefaultThemeOptions>({
+  base: '/xiuwuge/',
   lang: 'zh-CN',
   title: '修吾阁',
   description: '修吾身心，自吾可视。',
