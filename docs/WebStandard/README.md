@@ -9,6 +9,5 @@ next: /WebStandard/CodeStandard/HTML.md
 ## 约定2
 
 <div style="height: 1800px; background: red;">
-  <Test />
 </div>
 

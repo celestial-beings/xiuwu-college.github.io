@@ -1,8 +1,8 @@
-const files = require.context('../../components', true, /\.vue$/)
-const components = []
-files.keys().forEach(el => {
-  components.push(files(el).default)
-})
+import localComponents from '../../components/index'
+
+const components = [
+  ...localComponents
+]
 
 export default (app): void => {
   components.forEach(el => {
