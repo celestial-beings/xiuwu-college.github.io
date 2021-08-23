@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkxiuwu=self.webpackChunkxiuwu||[]).push([[138],{1138:(u,n,e)=>{e.r(n),e.d(n,{default:()=>r});var t=e(6252);const a=(0,t._)("div",{class:"my-footer"},null,-1),r={components:{Layout:e(3293).Z},render:function(u,n,e,r,s,o){const c=(0,t.up)("Layout",!0);return(0,t.wg)(),(0,t.j4)(c,null,{"navbar-after":(0,t.w5)((()=>[a])),_:1})}}}}]);
