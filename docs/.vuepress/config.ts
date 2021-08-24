@@ -21,8 +21,8 @@ export default defineUserConfig<DefaultThemeOptions>({
         link: '/WebStandard/'
       },
       {
-        text: '前端杂货铺',
-        link: '/WebGroceryStore/'
+        text: '深夜食堂',
+        link: '/WebMidnightDiner/'
       }
     ],
     sidebar: SidebarConfig

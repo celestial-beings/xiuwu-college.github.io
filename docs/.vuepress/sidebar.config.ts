@@ -1,5 +1,5 @@
 export default {
-  '/WebStandard': [
+  '/WebStandard/': [
     {
       text: '前端规范',
       children: [
@@ -16,6 +16,14 @@ export default {
             '/WebStandard/CodeStandard/Node.md'
           ]
         }
+      ]
+    }
+  ],
+  '/WebMidnightDiner/': [
+    {
+      text: '深夜食堂',
+      children: [
+        '/WebMidnightDiner/README.md'
       ]
     }
   ]
