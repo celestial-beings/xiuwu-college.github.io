@@ -12,7 +12,9 @@ export default defineUserConfig<DefaultThemeOptions>({
   themeConfig: {
     logo: '/images/logo.jpeg',
     contributors: true,
-    contributorsText: '修吾',
+    contributorsText: '修吾者',
+    lastUpdated: true,
+    lastUpdatedText: '编辑于',
     navbar: [
       {
         text: '前端规范',
@@ -21,10 +23,6 @@ export default defineUserConfig<DefaultThemeOptions>({
       {
         text: '前端杂货铺',
         link: '/WebGroceryStore/'
-      },
-      {
-        text: 'VuePress教程',
-        link: '/VuePress/'
       }
     ],
     sidebar: SidebarConfig
