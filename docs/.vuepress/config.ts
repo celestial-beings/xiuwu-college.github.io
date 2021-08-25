@@ -4,7 +4,7 @@ import SidebarConfig from './sidebar.config'
 import { path } from '@vuepress/utils'
 
 export default defineUserConfig<DefaultThemeOptions>({
-  base: '/xiuwuge.github.io/',
+  base: '/xiuwu-college.github.io/',
   lang: 'zh-CN',
   title: '修吾书院',
   head: [['link', { rel: 'icon', href: './images/logo.png' }]],
