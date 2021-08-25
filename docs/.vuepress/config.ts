@@ -6,11 +6,12 @@ import { path } from '@vuepress/utils'
 export default defineUserConfig<DefaultThemeOptions>({
   base: '/xiuwuge.github.io/',
   lang: 'zh-CN',
-  title: '修吾阁',
-  description: '修吾身心，自吾可视。',
+  title: '修吾书院',
+  head: [['link', { rel: 'icon', href: './images/logo.png' }]],
+  description: '吾当三日， 自省吾身。修吾身心，自吾可视。',
   theme: path.resolve(__dirname, './theme'),
   themeConfig: {
-    logo: '/images/logo.jpeg',
+    logo: '/images/logo.png',
     contributors: true,
     contributorsText: '修吾者',
     lastUpdated: true,
@@ -21,8 +22,8 @@ export default defineUserConfig<DefaultThemeOptions>({
         link: '/WebStandard/'
       },
       {
-        text: '深夜食堂',
-        link: '/WebMidnightDiner/'
+        text: '前端杂货铺',
+        link: '/WebGroceryStore/'
       }
     ],
     sidebar: SidebarConfig

@@ -19,11 +19,11 @@ export default {
       ]
     }
   ],
-  '/WebMidnightDiner/': [
+  '/WebGroceryStore/': [
     {
-      text: '深夜食堂',
+      text: '前端杂货铺',
       children: [
-        '/WebMidnightDiner/README.md'
+        '/WebGroceryStore/README.md'
       ]
     }
   ]

@@ -1,6 +1,6 @@
 ---
 home: true
-navbar: false
+navbar: true
 ---
 
-这是首页
+# 这是首页
