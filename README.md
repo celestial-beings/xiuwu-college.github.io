@@ -1,5 +1,5 @@
 # 传送门
 
-[https://celestial-beings.github.io/xiuwuge.github.io/](https://celestial-beings.github.io/xiuwuge.github.io/)
+[修吾学院](https://celestial-beings.github.io/xiuwu-college.github.io/)
 
 
