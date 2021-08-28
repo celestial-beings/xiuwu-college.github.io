@@ -6,6 +6,7 @@ export default {
         '/WebStandard/README.md',
         {
           text: '编码规范',
+          link: '/WebStandard/CodeStandard/HTML.md',
           children: [
             '/WebStandard/CodeStandard/HTML.md',
             '/WebStandard/CodeStandard/CSS.md',

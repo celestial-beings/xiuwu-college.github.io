@@ -6,6 +6,7 @@ const components = [
 
 export default (app): void => {
   components.forEach(el => {
+    console.log(el.name)
     app.component(el.name, el)
   })
 }
