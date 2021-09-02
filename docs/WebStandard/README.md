@@ -27,7 +27,7 @@ next: /WebStandard/CodeStandard/HTML.md
 
 ### 规约示例
 
-- 1.0.0【必要】使用2个空格缩紧。eslint: [indent](https://eslint.org/docs/rules/indent?spm=a2o8t.11089562.0.0.27e066546R0xEv)
+- 1.0.0【必要】使用2个空格缩紧。eslint: [indent](https://eslint.org/docs/rules/indent)
 
 ## 代码示例
 

@@ -8,7 +8,7 @@ JavaScript 编码规约主要包含编码风格、语言特性、注释、命名
 
 ### 缩进
 
-- 【必要】使用 2 个空格缩进。eslint: [indent](https://eslint.org/docs/rules/indent?spm=a2o8t.11089562.0.0.e81e66549unKXW)
+- 【必要】使用 2 个空格缩进。eslint: [indent](https://eslint.org/docs/rules/indent)
 
 统一使用 2 个空格缩进，不要使用 4 个空格或 tab 缩进：
 
@@ -26,11 +26,11 @@ function foo() {
 
 ### 分号
 
-- 【必要】使用分号。eslint: [semi](https://eslint.org/docs/rules/semi?spm=a2o8t.11089562.0.0.e81e6654CLo46z)
+- 【必要】使用分号。eslint: [semi](https://eslint.org/docs/rules/semi)
 
 统一以分号结束语句，可以避免 JS 引擎自动分号插入机制的怪异行为，在语义上也更加明确。
 
-> 自动分号插入机制（即 [Automatic Semicolon Insertion](https://tc39.es/ecma262/?spm=a2o8t.11089562.0.0.e81e6654ulDRwP#sec-automatic-semicolon-insertion)，简称 ASI） 是当 JS 遇到不带分号的语句时判断是否自动添加分号的机制，它在个别情况下的行为比较怪异，可能导致意想不到的效果。此外随着 JS 新特性的增加，异常的情况可能变得更加复杂。
+> 自动分号插入机制（即 [Automatic Semicolon Insertion](https://tc39.es/ecma262/#sec-automatic-semicolon-insertion)，简称 ASI） 是当 JS 遇到不带分号的语句时判断是否自动添加分号的机制，它在个别情况下的行为比较怪异，可能导致意想不到的效果。此外随着 JS 新特性的增加，异常的情况可能变得更加复杂。
 
 ```js
 // bad - 导致 Uncaught ReferenceError 报错
@@ -71,7 +71,7 @@ function foo() {
 
 ### 逗号
 
-- 【必要】对于逗号分隔的多行结构，不使用行首逗号。eslint: [comma-style](https://eslint.org/docs/rules/comma-style?spm=a2o8t.11089562.0.0.e81e6654fiugVe)
+- 【必要】对于逗号分隔的多行结构，不使用行首逗号。eslint: [comma-style](https://eslint.org/docs/rules/comma-style)
 
 ```js
 // bad
@@ -103,7 +103,7 @@ const hero = {
 };
 ```
 
-- 【必要】对于逗号分隔的多行结构，始终加上最后一个逗号。eslint: [comma-dangle](https://eslint.org/docs/rules/comma-dangle?spm=a2o8t.11089562.0.0.e81e6654eV3TFx)
+- 【必要】对于逗号分隔的多行结构，始终加上最后一个逗号。eslint: [comma-dangle](https://eslint.org/docs/rules/comma-dangle)
 
 这样可以使增删行更加容易，也会使 git diffs 更清晰。Babel 等编译器会在编译后的代码里帮我们去掉最后额外的逗号，因此不必担心在旧浏览器中的问题。
 
@@ -187,7 +187,7 @@ function createHero(
 
 > 术语解释：块（block） 可以理解为类、函数、控制语句等由大括号 <Strong>{}</Strong> 分隔的代码块状结构，由一对大括号界定，用于组合若干条语句 了解更多
 
-- 【推荐】始终使用大括号包裹代码块。eslint: [curly nonblock-statement-body-position](https://eslint.org/docs/rules/nonblock-statement-body-position?spm=a2o8t.11089562.0.0.e81e66544jbbBP)
+- 【推荐】始终使用大括号包裹代码块。eslint: [curly nonblock-statement-body-position](https://eslint.org/docs/rules/nonblock-statement-body-position)
 
 多行代码块必须用大括号包裹：
 
@@ -220,9 +220,9 @@ if (foo) {
 }
 ```
 
-- 【必要】对于非空代码块，采用 Egyptian Brackets 风格。eslint: [brace-style](https://eslint.org/docs/rules/brace-style?spm=a2o8t.11089562.0.0.e81e6654GN0KIU)
+- 【必要】对于非空代码块，采用 Egyptian Brackets 风格。eslint: [brace-style](https://eslint.org/docs/rules/brace-style)
 
-对于非空的代码块，大括号的换行方式采用 [Egyptian Brackets](https://blog.codinghorror.com/new-programming-jargon/?spm=a2o8t.11089562.0.0.e81e66544I0YqR) 风格，具体规则如下：
+对于非空的代码块，大括号的换行方式采用 [Egyptian Brackets](https://blog.codinghorror.com/new-programming-jargon/) 风格，具体规则如下：
 
 （1）左大括号 <Strong>{</Strong> 前面不换行，后面换行
 
@@ -290,7 +290,7 @@ try {
 }
 ```
 
-- 【必要】不要使用空代码块。eslint: [no-empty](https://eslint.org/docs/rules/no-empty?spm=a2o8t.11089562.0.0.e81e6654phTgXi)
+- 【必要】不要使用空代码块。eslint: [no-empty](https://eslint.org/docs/rules/no-empty)
 
 不要让代码中出现空代码块，这会使阅读者感到困惑。如果必须使用空块，需在块内写明注释。
 
@@ -313,7 +313,7 @@ if (condition) {
 
 合理并一致地使用空格有助于提升代码的可读性和可维护性。具体来说，我们采用如下的空格风格：
 
-- 【必要】空格风格。eslint: [space-before-blocks](https://eslint.org/docs/rules/space-before-blocks?spm=a2o8t.11089562.0.0.e81e6654seEmpH) [keyword-spacing](https://eslint.org/docs/rules/keyword-spacing?spm=a2o8t.11089562.0.0.e81e6654ownSuz) [space-in-parens](https://eslint.org/docs/rules/space-in-parens?spm=a2o8t.11089562.0.0.e81e6654RW4uSz) [array-bracket-spacing](https://eslint.org/docs/rules/array-bracket-spacing?spm=a2o8t.11089562.0.0.e81e66547O9Qva) [object-curly-spacing](https://eslint.org/docs/rules/object-curly-spacing?spm=a2o8t.11089562.0.0.e81e6654ACebkC) [space-infix-ops](https://eslint.org/docs/rules/space-infix-ops?spm=a2o8t.11089562.0.0.e81e6654AGmKHY) [key-spacing](https://eslint.org/docs/rules/key-spacing?spm=a2o8t.11089562.0.0.e81e6654swqXPn)
+- 【必要】空格风格。eslint: [space-before-blocks](https://eslint.org/docs/rules/space-before-blocks) [keyword-spacing](https://eslint.org/docs/rules/keyword-spacing) [space-in-parens](https://eslint.org/docs/rules/space-in-parens) [array-bracket-spacing](https://eslint.org/docs/rules/array-bracket-spacing) [object-curly-spacing](https://eslint.org/docs/rules/object-curly-spacing) [space-infix-ops](https://eslint.org/docs/rules/space-infix-ops) [key-spacing](https://eslint.org/docs/rules/key-spacing)
 
 块的左大括号 <Strong>{</Strong> 前有一个空格：
 
@@ -461,7 +461,7 @@ const x = !y;
 
 ### 空行
 
-- 【推荐】在文件末尾保留一行空行。eslint: [eol-last](https://eslint.org/docs/rules/eol-last?spm=a2o8t.11089562.0.0.e81e6654ldBp4J)
+- 【推荐】在文件末尾保留一行空行。eslint: [eol-last](https://eslint.org/docs/rules/eol-last)
 
 在非空文件中保留拖尾换行是一种常见的 UNIX 风格。它的好处同输出文件到终端一样，方便在串联和追加文件时不会打断 shell 的提示。
 
@@ -485,7 +485,7 @@ import { foo } from './Foo';
 export default foo;↵
 ```
 
-- 【必要】块的开始和结束不能是空行。eslint: [padded-blocks](https://eslint.org/docs/rules/padded-blocks?spm=a2o8t.11089562.0.0.e81e6654L7Tcv5)
+- 【必要】块的开始和结束不能是空行。eslint: [padded-blocks](https://eslint.org/docs/rules/padded-blocks)
 
 ```js
 // bad
@@ -556,7 +556,7 @@ return obj;
 
 ### 最大字符数和最大行数
 
-- 【推荐】单行最大字符数：100。eslint: [max-len](https://eslint.org/docs/rules/max-len?spm=a2o8t.11089562.0.0.e81e6654AIYsPx)
+- 【推荐】单行最大字符数：100。eslint: [max-len](https://eslint.org/docs/rules/max-len)
 
 过长的单行代码不易阅读和维护，需要进行合理换行。
 
@@ -591,11 +591,11 @@ $.ajax({
   .fail(() => console.log('You have failed this city.'));
 ```
 
-- 【参考】文件最大行数：1000。eslint: [max-lines](https://eslint.org/docs/rules/max-lines?spm=a2o8t.11089562.0.0.e81e6654V31yRx)
+- 【参考】文件最大行数：1000。eslint: [max-lines](https://eslint.org/docs/rules/max-lines)
 
 过长的文件不易阅读和维护，最好对其进行拆分。
 
-- 【参考】函数最大行数：80。eslint: [max-lines-per-function](https://eslint.org/docs/rules/max-lines-per-function?spm=a2o8t.11089562.0.0.e81e66549sT2Zc)
+- 【参考】函数最大行数：80。eslint: [max-lines-per-function](https://eslint.org/docs/rules/max-lines-per-function)
 
 过长的函数不易阅读和维护，最好对其进行拆分。
 
@@ -603,7 +603,7 @@ $.ajax({
 
 ### 变量声明
 
-- 【必要】使用 const 或 let 声明变量。eslint: [no-var](https://eslint.org/docs/rules/no-var?spm=a2o8t.11089562.0.0.e81e6654qH1Q5o) [no-undef](https://eslint.org/docs/rules/no-undef?spm=a2o8t.11089562.0.0.33396654ZCaDLX)
+- 【必要】使用 const 或 let 声明变量。eslint: [no-var](https://eslint.org/docs/rules/no-var) [no-undef](https://eslint.org/docs/rules/no-undef)
 
 从 ES6 开始，可以使用 <Strong>let</Strong> 和 <Strong>const</Strong> 关键字在块级作用域下声明变量。块级作用域在很多其他编程语言中都有使用，这样声明的变量不会污染全局命名空间。
 
@@ -629,7 +629,7 @@ foo = 'foo';
 const foo = 'foo';
 ```
 
-- 【必要】正确地使用 <Strong>const</Strong> 和 <Strong>let</Strong>。eslint: [prefer-const](https://eslint.org/docs/rules/prefer-const?spm=a2o8t.11089562.0.0.33396654b2jHpI)
+- 【必要】正确地使用 <Strong>const</Strong> 和 <Strong>let</Strong>。eslint: [prefer-const](https://eslint.org/docs/rules/prefer-const)
 
 声明变量时，应优先使用 <Strong>const</Strong>，只有当变量会被重新赋值时才使用 <Strong>let</Strong>：
 
@@ -663,7 +663,7 @@ arr.push('foo');
 obj.name = 'bar';
 ```
 
-- 【必要】一条声明语句声明一个变量。eslint: [one-var](https://eslint.org/docs/rules/one-var?spm=a2o8t.11089562.0.0.333966541ZEXGV)
+- 【必要】一条声明语句声明一个变量。eslint: [one-var](https://eslint.org/docs/rules/one-var)
 
 这样做更易于追加新的声明语句（你不需要总去把最后的 <Strong>;</Strong> 改成 <Strong>,</Strong> 了），也更易于进行单步调试。
 
@@ -677,7 +677,7 @@ const foo = 1;
 const bar = 2;
 ```
 
--【必要】声明的变量必须被使用。eslint: [no-unused-vars](https://eslint.org/docs/rules/no-unused-vars?spm=a2o8t.11089562.0.0.33396654SFHxU1)
+-【必要】声明的变量必须被使用。eslint: [no-unused-vars](https://eslint.org/docs/rules/no-unused-vars)
 
 声明而未使用的变量、表达式可能带来潜在的问题，也会给维护者造成困扰，应将它们删除。
 
@@ -711,7 +711,7 @@ function getXPlusY(x, y) {
 }
 ```
 
-- 【必要】不要在声明前就使用变量。eslint: [no-use-before-define](https://eslint.org/docs/rules/no-use-before-define?spm=a2o8t.11089562.0.0.33396654bwi5jv)
+- 【必要】不要在声明前就使用变量。eslint: [no-use-before-define](https://eslint.org/docs/rules/no-use-before-define)
 
 在 ES5 中，由于 <Strong>var</Strong> 的声明提升作用，变量可以在声明前使用，但这样做可能给人带来疑惑和隐患，所以不要在声明前就使用变量：
 
@@ -775,7 +775,7 @@ function getData(id) {
 }
 ```
 
-- 【必要】变量不要与外层作用域已存在的变量同名。eslint: [no-shadow](https://eslint.org/docs/rules/no-shadow?spm=a2o8t.11089562.0.0.33396654hWI9nu)
+- 【必要】变量不要与外层作用域已存在的变量同名。eslint: [no-shadow](https://eslint.org/docs/rules/no-shadow)
 
 如果变量与外层已存在变量同名，会降低可读性，也会导致内层作用域无法读取外层作用域的同名变量。
 
@@ -796,7 +796,7 @@ if (someCondition) {
 }
 ```
 
-- 【必要】不要重复声明变量和函数。eslint: [no-redeclare](https://eslint.org/docs/rules/no-redeclare?spm=a2o8t.11089562.0.0.33396654iZTpFZ)
+- 【必要】不要重复声明变量和函数。eslint: [no-redeclare](https://eslint.org/docs/rules/no-redeclare)
 
 在 ES5 中，尽管使用 <Strong>var</Strong> 重复声明不会报错，但这样做会令人疑惑，降低程序的可维护性。同理，函数的声明也不要与已存在的变量和函数重名：
 
@@ -854,7 +854,7 @@ function myFunc(arg) {
 myFunc('bar'); // => 'bar'
 ```
 
-- 【必要】禁止连续赋值。eslint: [no-multi-assign](https://eslint.org/docs/rules/no-multi-assign?spm=a2o8t.11089562.0.0.33396654WC0dZD)
+- 【必要】禁止连续赋值。eslint: [no-multi-assign](https://eslint.org/docs/rules/no-multi-assign)
 
 变量的连续赋值让人难以阅读和理解，并且可能导致意想不到的结果（如产生全局变量）。
 
@@ -902,9 +902,9 @@ let e;
 
 ### 原始类型
 
-> JS的数据类型包括 7 种原始类型（primitive type），即 <Strong>Boolean</Strong>, <Strong>Null</Strong>, <Strong>Undefined</Strong>, <Strong>Number</Strong>, <Strong>String</Strong>, <Strong>Symbol</Strong> (ES6 新定义), <Strong>BigInt</Strong>（ES11新定义），以及 <Strong>Object</Strong> 类型，[了解更多](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures?spm=a2o8t.11089562.0.0.33396654QLpm2h)。这个章节主要介绍原始类型相关的规约。
+> JS的数据类型包括 7 种原始类型（primitive type），即 <Strong>Boolean</Strong>, <Strong>Null</Strong>, <Strong>Undefined</Strong>, <Strong>Number</Strong>, <Strong>String</Strong>, <Strong>Symbol</Strong> (ES6 新定义), <Strong>BigInt</Strong>（ES11新定义），以及 <Strong>Object</Strong> 类型，[了解更多](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)。这个章节主要介绍原始类型相关的规约。
 
-- 【必要】不要使用 new Number/String/Boolean。eslint: [no-new-wrappers](https://eslint.org/docs/rules/no-new-wrappers?spm=a2o8t.11089562.0.0.333966543N7nV2)
+- 【必要】不要使用 new Number/String/Boolean。eslint: [no-new-wrappers](https://eslint.org/docs/rules/no-new-wrappers)
 
 使用 new Number/String//Boolean 声明不会有任何好处，还会导致变量成为 <Strong>object</Strong> 类型，可能引起 bug。
 
@@ -976,7 +976,7 @@ const hasAge = Boolean(age);
 const hasAge = !!age;
 ```
 
-- 【推荐】使用 <Strong>parseInt()</Strong> 方法时总是带上基数。eslint: [radix](https://eslint.org/docs/rules/radix?spm=a2o8t.11089562.0.0.33396654plvPIM)
+- 【推荐】使用 <Strong>parseInt()</Strong> 方法时总是带上基数。eslint: [radix](https://eslint.org/docs/rules/radix)
 
 <Strong>parseInt</Strong> 方法的第一个参数是待转换的字符串，第二个参数是转换基数。当第二个参数省略时，<Strong>parseInt</Strong> 会根据第一个参数自动判断基数：
 
@@ -986,7 +986,7 @@ const hasAge = !!age;
 
 （3）其他情况则使用 10 作基数
 
-虽然从 ES5 开始就移除了自动以 8 作基数的规则，但有时难以保证所有的浏览器和 JS 执行环境都支持了这一特性。[了解更多](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt?spm=a2o8t.11089562.0.0.33396654q9mipx)
+虽然从 ES5 开始就移除了自动以 8 作基数的规则，但有时难以保证所有的浏览器和 JS 执行环境都支持了这一特性。[了解更多](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 
 因此，推荐始终给 <Strong>parseInt()</Strong> 方法加上基数，除非可以保证代码的执行环境不受上述特性的影响。
 
@@ -998,7 +998,7 @@ parseInt("071"); // => ES5 前的执行环境中得到的是 57
 parseInt("071", 10); // => 71
 ```
 
-- 【必要】避免不必要的布尔类型转换。eslint: [no-extra-boolean-cast](https://eslint.org/docs/rules/no-extra-boolean-cast?spm=a2o8t.11089562.0.0.33396654tnG3Es)
+- 【必要】避免不必要的布尔类型转换。eslint: [no-extra-boolean-cast](https://eslint.org/docs/rules/no-extra-boolean-cast)
 
 在 <Strong>if</Strong> 等条件语句中，将表达式的结果强制转换成布尔值是多余的：
 
@@ -1026,7 +1026,7 @@ while (foo) {
 const a = flag ? b : c;
 ```
 
-- 【必要】字符串优先使用单引号。eslint: [quotes](https://eslint.org/docs/rules/quotes?spm=a2o8t.11089562.0.0.33396654osrzDR)
+- 【必要】字符串优先使用单引号。eslint: [quotes](https://eslint.org/docs/rules/quotes)
 
 ```js
 // bad
@@ -1037,7 +1037,7 @@ const name = `tod`; // 模板字符串中应包含变量或换行，否则需用
 const name = 'tod';
 ```
 
-- 【推荐】使用模板字符串替代字符串拼接。eslint: [prefer-template](https://eslint.org/docs/rules/prefer-template?spm=a2o8t.11089562.0.0.33396654dvp6ja)
+- 【推荐】使用模板字符串替代字符串拼接。eslint: [prefer-template](https://eslint.org/docs/rules/prefer-template)
 
 模板字符串让代码更简洁，可读性更强
 
@@ -1068,7 +1068,7 @@ const foo = `'this' is "quoted"`;
 
 ### 数组
 
-- 【必要】使用字面量创建数组。eslint: [no-array-constructor](https://eslint.org/docs/rules/no-array-constructor?spm=a2o8t.11089562.0.0.33396654UR1hEo)
+- 【必要】使用字面量创建数组。eslint: [no-array-constructor](https://eslint.org/docs/rules/no-array-constructor)
 
 不要使用 <Strong>new Array()</Strong> 和 <Strong>Array()</Strong> 创建数组，除非为了构造某一长度的空数组。
 
@@ -1082,7 +1082,7 @@ const a = [1, 2, 3];
 const b = new Array(500); // 构造长度为 500 的空数组
 ```
 
-- 【必要】某些数组方法的回调函数中必须包含 <Strong>return</Strong> 语句。eslint: [array-callback-return](https://eslint.org/docs/rules/array-callback-return?spm=a2o8t.11089562.0.0.33396654bES0z0)
+- 【必要】某些数组方法的回调函数中必须包含 <Strong>return</Strong> 语句。eslint: [array-callback-return](https://eslint.org/docs/rules/array-callback-return)
 
 以下数组方法：<Strong>map</Strong>, <Strong>filter</Strong>, <Strong>from</Strong>, <Strong>every</Strong>, <Strong>find</Strong>, <Strong>findIndex</Strong>, <Strong>reduce</Strong>, <Strong>reduceRight</Strong>, <Strong>some</Strong>, <Strong>sort</Strong> 的回调函数中必须包含 <Strong>return</Strong> 语句，否则可能会产生误用或错误。
 
@@ -1221,7 +1221,7 @@ const { left, top } = giveMeDivPosition(div);
 
 ### 对象
 
-- 【必要】使用字面量创建对象。eslint: [no-new-object](https://eslint.org/docs/rules/no-new-object?spm=a2o8t.11089562.0.0.33396654JGJuXM)
+- 【必要】使用字面量创建对象。eslint: [no-new-object](https://eslint.org/docs/rules/no-new-object)
 
 ```js
 // bad
@@ -1231,7 +1231,7 @@ const obj = new Object();
 const obj = {};
 ```
 
-- 【必要】使用对象属性和方法的简写语法。eslint: [object-shorthand](https://eslint.org/docs/rules/object-shorthand?spm=a2o8t.11089562.0.0.33396654YADh0g)
+- 【必要】使用对象属性和方法的简写语法。eslint: [object-shorthand](https://eslint.org/docs/rules/object-shorthand)
 
 ES6 提供了对象属性和方法的简写语法，可以使代码更加简洁：
 
@@ -1284,7 +1284,7 @@ const obj = {
 };
 ```
 
-- 【必要】对象的属性名不要用引号包裹，除非包含特殊字符。eslint: [quote-props](https://eslint.org/docs/rules/quote-props?spm=a2o8t.11089562.0.0.33396654pe7Fk0)
+- 【必要】对象的属性名不要用引号包裹，除非包含特殊字符。eslint: [quote-props](https://eslint.org/docs/rules/quote-props)
 
 这样更加简洁，也有助于语法高亮和一些 JS 引擎的优化。
 
@@ -1306,7 +1306,7 @@ const good = {
 };
 ```
 
-- 【必要】优先使用 . 访问对象的属性。eslint: [dot-notation](https://eslint.org/docs/rules/dot-notation?spm=a2o8t.11089562.0.0.33396654mpdSzZ)
+- 【必要】优先使用 . 访问对象的属性。eslint: [dot-notation](https://eslint.org/docs/rules/dot-notation)
 
 这样可以提高代码可读性。<Strong>[]</Strong> 仅应在访问动态属性名或包含特殊字符的属性名时被使用。
 
@@ -1353,7 +1353,7 @@ const copy = { a: 1, b: 2, c: 3 };
 const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
 ```
 
-- 【推荐】使用解构获取对象属性。eslint: [prefer-destructuring](https://eslint.org/docs/rules/prefer-destructuring?spm=a2o8t.11089562.0.0.333966547kvBgV)
+- 【推荐】使用解构获取对象属性。eslint: [prefer-destructuring](https://eslint.org/docs/rules/prefer-destructuring)
 
 获取对象的同名属性、多个属性时，使用解构让代码更简洁，也可以减少为了使用属性而创建的临时引用。
 
@@ -1402,7 +1402,7 @@ const obj = {
 };
 ```
 
-- 【必要】不要直接在对象上调用 <Strong>Object.prototypes</Strong> 上的方法。eslint: [no-prototype-builtins](https://eslint.org/docs/rules/no-prototype-builtins?spm=a2o8t.11089562.0.0.333966545LLuPZ)
+- 【必要】不要直接在对象上调用 <Strong>Object.prototypes</Strong> 上的方法。eslint: [no-prototype-builtins](https://eslint.org/docs/rules/no-prototype-builtins)
 
 不要直接在对象上调用 <Strong>Object.prototypes</Strong> 上的方法，例如 <Strong>hasOwnProperty</Strong>、<Strong>propertyIsEnumerable</Strong>、<Strong>isPrototypeOf</Strong>。
 
@@ -1426,7 +1426,7 @@ console.log(Object.prototype.hasOwnProperty.call(objNull, 'foo'));
 
 ### 函数
 
-- 【必要】不要用 <Strong>Function</Strong> 构造函数创建函数。eslint: [no-new-func](https://eslint.org/docs/rules/no-new-func?spm=a2o8t.11089562.0.0.33396654MtbwcU)
+- 【必要】不要用 <Strong>Function</Strong> 构造函数创建函数。eslint: [no-new-func](https://eslint.org/docs/rules/no-new-func)
 
 使用 <Strong>new Function</Strong> 创建函数会像 <Strong>eval()</Strong> 方法一样执行字符串，带来安全隐患
 
@@ -1438,7 +1438,7 @@ const sum = new Function('a', 'b', 'return a + b');
 const sum = (a, b) => (a + b);
 ```
 
-- 【必要】不要在块中使用函数声明。eslint: [no-inner-declarations](https://eslint.org/docs/rules/no-inner-declarations?spm=a2o8t.11089562.0.0.33396654OkDdar)
+- 【必要】不要在块中使用函数声明。eslint: [no-inner-declarations](https://eslint.org/docs/rules/no-inner-declarations)
 
 在非函数块（如 <Strong>if</Strong>、<Strong>while</Strong> 等）中，不要使用函数声明：
 
@@ -1497,7 +1497,7 @@ const foo = function foo_more_descriptive_name() {
 };
 ```
 
-- 【必要】使用箭头函数代替匿名函数。eslint: [prefer-arrow-callback](https://eslint.org/docs/rules/prefer-arrow-callback?spm=a2o8t.11089562.0.0.33396654bYg9li)
+- 【必要】使用箭头函数代替匿名函数。eslint: [prefer-arrow-callback](https://eslint.org/docs/rules/prefer-arrow-callback)
 
 ES6 提供的箭头函数可以解决 <Strong>this</Strong> 指向的问题，而且语法更简洁。
 
@@ -1515,7 +1515,7 @@ ES6 提供的箭头函数可以解决 <Strong>this</Strong> 指向的问题，�
 });
 ```
 
-- 【推荐】箭头函数编码风格。eslint: [arrow-parens](https://eslint.org/docs/rules/arrow-parens?spm=a2o8t.11089562.0.0.33396654MJMO7j) [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style?spm=a2o8t.11089562.0.0.3339665432JHMT)
+- 【推荐】箭头函数编码风格。eslint: [arrow-parens](https://eslint.org/docs/rules/arrow-parens) [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style)
 
 箭头函数参数的小括号、函数体的大括号在某些时候可以省略，这可能导致风格的不统一，因此需要规范其编码风格：
 
@@ -1608,7 +1608,7 @@ function foo(name, options, args) {
 }
 ```
 
-- 【必要】不要使用 <Strong>arguments</Strong> 对象。eslint: [prefer-rest-params](https://eslint.org/docs/rules/prefer-rest-params?spm=a2o8t.11089562.0.0.33396654dZMYvl)
+- 【必要】不要使用 <Strong>arguments</Strong> 对象。eslint: [prefer-rest-params](https://eslint.org/docs/rules/prefer-rest-params)
 
 不要使用 <Strong>arguments</Strong> 对象，使用剩余参数操作符 <Strong>...</Strong> 代替。
 
@@ -1668,7 +1668,7 @@ function multiply(a, b = 1) {
 const x = multiply(42); // => 42
 ```
 
-- 【推荐】不要修改函数参数。eslint: [no-param-reassign](https://eslint.org/docs/rules/no-param-reassign?spm=a2o8t.11089562.0.0.333966547MDumm)
+- 【推荐】不要修改函数参数。eslint: [no-param-reassign](https://eslint.org/docs/rules/no-param-reassign)
 
 不要修改引用类型的参数，这可能导致作为入参的原变量发生变化：
 
@@ -1706,7 +1706,7 @@ function foo(bar, baz) {
 }
 ```
 
-- 【必要】将立即执行函数表达式（IIFE）用小括号包裹。eslint: [wrap-iife](https://eslint.org/docs/rules/wrap-iife?spm=a2o8t.11089562.0.0.33396654qbVoWx)
+- 【必要】将立即执行函数表达式（IIFE）用小括号包裹。eslint: [wrap-iife](https://eslint.org/docs/rules/wrap-iife)
 
 IIFE 是一个独立的执行单元，将它用小括号包裹可以更清晰的体现这点。需要提醒的是，由于 ES6 模块语法的引入，你可能不再需要使用 IIFE 了。
 
@@ -1715,7 +1715,7 @@ IIFE 是一个独立的执行单元，将它用小括号包裹可以更清晰的
   console.log('Welcome to the Internet. Please follow me.');
 }());
 ```
-- 【参考】函数的复杂度不应过高。eslint: [complexity](https://eslint.org/docs/rules/complexity?spm=a2o8t.11089562.0.0.33396654Zvd5Ti)
+- 【参考】函数的复杂度不应过高。eslint: [complexity](https://eslint.org/docs/rules/complexity)
 
 过高的复杂度意味着代码难以维护和测试。我们推荐函数的复杂度不要超过以下阈值：
 
@@ -1723,7 +1723,7 @@ IIFE 是一个独立的执行单元，将它用小括号包裹可以更清晰的
 
 （2）认知复杂度不超过 15
 
-- 【参考】函数的参数不应过多。eslint: [max-params](https://eslint.org/docs/rules/max-params?spm=a2o8t.11089562.0.0.33396654vVF9pc) 如果函数的参数过多，将不利于函数的维护和调用。这时你需要考虑是否函数做了太多的事情，是否有必要对其进行拆分。
+- 【参考】函数的参数不应过多。eslint: [max-params](https://eslint.org/docs/rules/max-params) 如果函数的参数过多，将不利于函数的维护和调用。这时你需要考虑是否函数做了太多的事情，是否有必要对其进行拆分。
 
 如果必须使用过多的参数，可以考虑用对象代替参数列表：
 
@@ -1741,7 +1741,7 @@ function doSomething({ param1, param2, param3, param4, param5, param6, param7, p
 doSomething({ param1: 1, param2: 2, param3: 3, param4: 4, param5: 5, param6: 6, param7: 7, param8: 8 });
 ```
 
-- 【必要】<Strong>generator</Strong> 函数内必须有 <Strong>yield</Strong> 语句。eslint: [require-yield](https://eslint.org/docs/rules/require-yield?spm=a2o8t.11089562.0.0.33396654DNjEI8)
+- 【必要】<Strong>generator</Strong> 函数内必须有 <Strong>yield</Strong> 语句。eslint: [require-yield](https://eslint.org/docs/rules/require-yield)
 
 如果一个 <Strong>generator</Strong> 中没有 <Strong>yield</Strong> 语句，那么这个 <Strong>generator</Strong> 就不是必须的。
 
@@ -1852,7 +1852,7 @@ class PeekableQueue extends Queue {
 
 - 【必要】避免不必要的 <Strong>constructor</Strong>。
 
-ES6 <Strong>class</Strong> 会提供一个默认的 <Strong>constructor</Strong>，空 <Strong>constructor</Strong> 或者只调用父类的 <Strong>constructor</Strong> 是不必要的。eslint: [no-useless-constructor](https://eslint.org/docs/rules/no-useless-constructor?spm=a2o8t.11089562.0.0.33396654mdFpSi)
+ES6 <Strong>class</Strong> 会提供一个默认的 <Strong>constructor</Strong>，空 <Strong>constructor</Strong> 或者只调用父类的 <Strong>constructor</Strong> 是不必要的。eslint: [no-useless-constructor](https://eslint.org/docs/rules/no-useless-constructor)
 
 ```js
 // bad - 以下两种 constructor 可以省略
@@ -1889,7 +1889,7 @@ class Child extends Parent {
 }
 ```
 
-- 【必要】正确地使用 <Strong>super</Strong> 方法。eslint: [constructor-super](https://eslint.org/docs/rules/constructor-super?spm=a2o8t.11089562.0.0.33396654vgM23m) [no-this-before-super](https://eslint.org/docs/rules/no-this-before-super?spm=a2o8t.11089562.0.0.33396654SJRBa5)
+- 【必要】正确地使用 <Strong>super</Strong> 方法。eslint: [constructor-super](https://eslint.org/docs/rules/constructor-super) [no-this-before-super](https://eslint.org/docs/rules/no-this-before-super)
 
 子类的 <Strong>constructor</Strong> 中必须使用 <Strong>super()</Strong>，且必须在 <Strong>this</Strong> 和 <Strong>super</Strong> 关键词前调用
 非子类的 <Strong>constructor</Strong> 中不能使用 <Strong>super()</Strong>
@@ -1934,7 +1934,7 @@ class Child extends Parent {
 }
 ```
 
-- 【必要】避免重复的类成员命名。eslint: [no-dupe-class-members](https://eslint.org/docs/rules/no-dupe-class-members?spm=a2o8t.11089562.0.0.33396654MilsMt)
+- 【必要】避免重复的类成员命名。eslint: [no-dupe-class-members](https://eslint.org/docs/rules/no-dupe-class-members)
 
 重复的类成员声明最终生效的将是最后一个：
 
@@ -1955,7 +1955,7 @@ class Foo {
 
 ### 模块
 
-- 【推荐】使用 ES6 <Strong>modules</Strong> 而非其他非标准的模块系统。eslint: [import/module-systems](https://github.com/import-js/eslint-plugin-import?spm=a2o8t.11089562.0.0.33396654p4ez4x#module-systems)
+- 【推荐】使用 ES6 <Strong>modules</Strong> 而非其他非标准的模块系统。eslint: [import/module-systems](https://github.com/import-js/eslint-plugin-import#module-systems)
 
 使用 ES6 <Strong>modules</Strong> (<Strong>import</Strong>/<Strong>export</Strong>)，而不是其他非标准的模块系统，如 <Strong>CommonJS</Strong>、<Strong>AMD</Strong>、<Strong>CMD</Strong>。
 
@@ -2099,9 +2099,9 @@ export default Component;
 
 ### 操作符
 
-- 【推荐】使用严格相等运算符。eslint: [eqeqeq](https://eslint.org/docs/rules/eqeqeq?spm=a2o8t.11089562.0.0.33396654uwlNd8)
+- 【推荐】使用严格相等运算符。eslint: [eqeqeq](https://eslint.org/docs/rules/eqeqeq)
 
-非严格相等运算符（<Strong>==</Strong> 和 <Strong>!=</Strong>）会在比较前将被比较值转换为相同类型，对于不熟悉 JS 语言特性的人来说，这可能造成不小的隐患。[了解更多](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness?spm=a2o8t.11089562.0.0.33396654T6rVqC)
+非严格相等运算符（<Strong>==</Strong> 和 <Strong>!=</Strong>）会在比较前将被比较值转换为相同类型，对于不熟悉 JS 语言特性的人来说，这可能造成不小的隐患。[了解更多](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 
 因此，一般情况下我们应该使用严格比较运算符（ <Strong>===</Strong>  和 <Strong>!==</Strong> ）进行比较。如果要比较的两个值类型不同，应该显性地将其转换成相同类型再进行严格比较，而不是依赖于 <Strong>==</Strong>  和 <Strong>!=</Strong>  的隐式类型转换。
 
@@ -2119,7 +2119,7 @@ if (Number(id) === 83949) {
 }
 ```
 
-- 【必要】不要使用一元自增自减运算符。eslint: [no-plusplus](https://eslint.org/docs/rules/no-plusplus?spm=a2o8t.11089562.0.0.33396654tVMLWD)
+- 【必要】不要使用一元自增自减运算符。eslint: [no-plusplus](https://eslint.org/docs/rules/no-plusplus)
 
 不要使用一元自增自减运算符（<Strong>++</Strong> 和 <Strong>--</Strong>），除非在 <Strong>for</Strong> 循环条件中。
 
@@ -2137,7 +2137,7 @@ num += 1;
 num -= 1;
 ```
 
-- 【必要】不要使用 <Strong>void</Strong> 运算符。eslint: [no-void](https://eslint.org/docs/rules/no-void?spm=a2o8t.11089562.0.0.33396654gPrr2Y)
+- 【必要】不要使用 <Strong>void</Strong> 运算符。eslint: [no-void](https://eslint.org/docs/rules/no-void)
 
 在很老版本的 JS 中，<Strong>undefined</Strong> 值是可变的，因此使用 <Strong>void</Strong> 语句一般是用来得到一个 <Strong>undefined</Strong> 值。而在新版本的 JS 中，上面的问题已不复存在。因此出于程序可读性的考虑，禁止使用 <Strong>void</Strong> 运算符。
 
@@ -2149,7 +2149,7 @@ const foo = void 0;
 const foo = undefined;
 ```
 
-- 【必要】避免嵌套的三元表达式。eslint: [no-nested-ternary](https://eslint.org/docs/rules/no-nested-ternary?spm=a2o8t.11089562.0.0.33396654zYTNLI)
+- 【必要】避免嵌套的三元表达式。eslint: [no-nested-ternary](https://eslint.org/docs/rules/no-nested-ternary)
 
 嵌套的三元表达式会降低代码可读性。
 
@@ -2162,7 +2162,7 @@ const qu = qux === quxx ? bing : bam;
 const foo = bar ? baz : qu;
 ```
 
-- 【必要】避免不必要的三元表达式。eslint: [no-unneeded-ternary](https://eslint.org/docs/rules/no-unneeded-ternary?spm=a2o8t.11089562.0.0.33396654mIFI0p)
+- 【必要】避免不必要的三元表达式。eslint: [no-unneeded-ternary](https://eslint.org/docs/rules/no-unneeded-ternary)
 
 ```js
 // bad
@@ -2176,7 +2176,7 @@ const bar = !!c;
 const baz = !c;
 ```
 
-- 【必要】混合使用多种操作符时，用小括号包裹分组。eslint: [no-mixed-operators](https://eslint.org/docs/rules/no-mixed-operators?spm=a2o8t.11089562.0.0.33396654QTXnXs)
+- 【必要】混合使用多种操作符时，用小括号包裹分组。eslint: [no-mixed-operators](https://eslint.org/docs/rules/no-mixed-operators)
 
 这可以更清晰地表达代码意图，提高可读性。四则运算符（<Strong>+</Strong>, <Strong>-</Strong>, <Strong>*</Strong>, <Strong>/</Strong>）可以不包裹，因为大多数人熟知它们的优先级。
 
@@ -2209,7 +2209,7 @@ const bar = a + b / c * d;
 
 ### 控制语句
 
-- 【必要】<Strong>switch</Strong> 语句中的 <Strong>case</Strong> 需要以 <Strong>break</Strong> 结尾。eslint: [no-fallthrough](https://eslint.org/docs/rules/no-fallthrough?spm=a2o8t.11089562.0.0.33396654AfCMw4)
+- 【必要】<Strong>switch</Strong> 语句中的 <Strong>case</Strong> 需要以 <Strong>break</Strong> 结尾。eslint: [no-fallthrough](https://eslint.org/docs/rules/no-fallthrough)
 
 ```js
 // bad
@@ -2235,7 +2235,7 @@ switch(foo) {
 }
 ```
 
-- 【推荐】<Strong>switch</Strong> 语句需要始终包含 <Strong>default</Strong> 分支。eslint: [default-case](https://eslint.org/docs/rules/default-case?spm=a2o8t.11089562.0.0.33396654o4qqtx)
+- 【推荐】<Strong>switch</Strong> 语句需要始终包含 <Strong>default</Strong> 分支。eslint: [default-case](https://eslint.org/docs/rules/default-case)
 
 在使用 <Strong>switch</Strong> 语句时，有时会出现因开发者忘记设置 <Strong>default</Strong> 而导致错误，因此建议总是给出 <Strong>default</Strong>。如果有意省略 <Strong>default</Strong>，请在 <Strong>switch</Strong> 语句末尾用 <Strong>// no default</Strong> 注释指明：
 
@@ -2291,7 +2291,7 @@ if (bar === 1) {
 }
 ```
 
-- 【参考】控制语句的嵌套层级不要过深。eslint: [max-depth](https://eslint.org/docs/rules/max-depth?spm=a2o8t.11089562.0.0.33396654qKApn0)
+- 【参考】控制语句的嵌套层级不要过深。eslint: [max-depth](https://eslint.org/docs/rules/max-depth)
 
 控制语句的嵌套层级不要超过 4 级，否则将难以阅读和维护：
 
@@ -2315,7 +2315,7 @@ if (condition1) {
 }
 ```
 
-- 【必要】<Strong>for</Strong> 循环中的计数器应朝着正确方向移动。eslint: [for-direction](https://eslint.org/docs/rules/for-direction?spm=a2o8t.11089562.0.0.33396654dTNuz8)
+- 【必要】<Strong>for</Strong> 循环中的计数器应朝着正确方向移动。eslint: [for-direction](https://eslint.org/docs/rules/for-direction)
 
 当 <Strong>for</Strong> 循环中更新子句的计数器朝着错误的方向移动时，循环的终止条件将永远无法达到，这会导致死循环的出现。这时要么是程序出现了错误，要么应将 <Strong>for</Strong> 循环改为 <Strong>while</Strong> 循环。
 
@@ -2331,7 +2331,7 @@ for (let i = 0; i < length; i++) {
 }
 ```
 
-- 【推荐】<Strong>for-in</Strong> 循环中需要对 <Strong>key</Strong> 进行验证。eslint: [guard-for-in](https://eslint.org/docs/rules/guard-for-in?spm=a2o8t.11089562.0.0.33396654v6SY2z)
+- 【推荐】<Strong>for-in</Strong> 循环中需要对 <Strong>key</Strong> 进行验证。eslint: [guard-for-in](https://eslint.org/docs/rules/guard-for-in)
 
 使用 <Strong>for-in</Strong> 循环时需要避免对象从原型链上继承来的属性也被遍历出来，因此保险的做法是对 <Strong>key</Strong> 是否是对象自身的属性进行验证：
 
@@ -2349,7 +2349,7 @@ for (const key in foo) {
 }
 ```
 
-- 【参考】如果一个 <Strong>if</Strong> 语句的结果总是返回一个 <Strong>return</Strong> 语句，那么最后的 <Strong>else</Strong> 是不必要的。eslint: [no-else-return](https://eslint.org/docs/rules/no-else-return?spm=a2o8t.11089562.0.0.33396654SOJW3G)
+- 【参考】如果一个 <Strong>if</Strong> 语句的结果总是返回一个 <Strong>return</Strong> 语句，那么最后的 <Strong>else</Strong> 是不必要的。eslint: [no-else-return](https://eslint.org/docs/rules/no-else-return)
 
 ```js
 // bad
@@ -2406,7 +2406,7 @@ if ('') { // => false
 
 ### 其他
 
-- 【必要】禁止使用 <Strong>eval</Strong>。eslint: [no-eval](https://eslint.org/docs/rules/no-eval?spm=a2o8t.11089562.0.0.33396654lTenf9)
+- 【必要】禁止使用 <Strong>eval</Strong>。eslint: [no-eval](https://eslint.org/docs/rules/no-eval)
 
 <Strong>eval</Strong> 语句存在安全风险，可能导致注入攻击。
 
@@ -2422,7 +2422,7 @@ const key = 'x';
 const value = obj[key];
 ```
 
-- 【必要】禁止使用 <Strong>debugger</Strong>。eslint: [no-debugger](https://eslint.org/docs/rules/no-debugger?spm=a2o8t.11089562.0.0.33396654YgNT0H)
+- 【必要】禁止使用 <Strong>debugger</Strong>。eslint: [no-debugger](https://eslint.org/docs/rules/no-debugger)
 
 <Strong>debugger</Strong> 语句会让程序暂停，并在当前位置开启调试器。它通常在程序调试阶段使用，不应发布到线上。
 
@@ -2434,7 +2434,7 @@ function isTruthy(x) {
 }
 ```
 
-- 【推荐】禁止使用 <Strong>alert</Strong>。eslint: [no-alert](https://eslint.org/docs/rules/no-alert?spm=a2o8t.11089562.0.0.33396654A1sKYH)
+- 【推荐】禁止使用 <Strong>alert</Strong>。eslint: [no-alert](https://eslint.org/docs/rules/no-alert)
 
 <Strong>alert</Strong> 语句会使浏览器弹出原生警告框，这可能让人感觉你的程序出错了。如果需要对用户弹出警告信息，好的做法是使用第三方的弹窗组件或自己定义警告框样式。同理，<Strong>confirm</Strong> 和 <Strong>prompt</Strong> 语句也不应被使用。
 
@@ -2446,7 +2446,7 @@ alert('Oops!');
 Alert('Oops!');
 ```
 
-- 【推荐】生产环境禁止使用 <Strong>console</Strong>。eslint: [no-console](https://eslint.org/docs/rules/no-console?spm=a2o8t.11089562.0.0.33396654YfZOEg)
+- 【推荐】生产环境禁止使用 <Strong>console</Strong>。eslint: [no-console](https://eslint.org/docs/rules/no-console)
 
 <Strong>console</Strong> 语句通常在调试阶段使用，发布上线前，应该去掉代码里所有的 <Strong>console</Strong> 语句。
 
@@ -2558,7 +2558,7 @@ function make(tag) {
 }
 ```
 
-- 【必要】注释内容和注释符之间需要有一个空格。eslint: [spaced-comment](https://eslint.org/docs/rules/spaced-comment?spm=a2o8t.11089562.0.0.33396654oiasJQ)
+- 【必要】注释内容和注释符之间需要有一个空格。eslint: [spaced-comment](https://eslint.org/docs/rules/spaced-comment)
 
 注释内容和注释符之间需要有一个空格，以增加可读性：
 
@@ -2594,7 +2594,7 @@ function make(tag) {
 }
 ```
 
-- 【参考】合理使用特殊注释标记。eslint: [no-warning-comments](https://eslint.org/docs/rules/no-warning-comments?spm=a2o8t.11089562.0.0.4b006654RDxCpg)
+- 【参考】合理使用特殊注释标记。eslint: [no-warning-comments](https://eslint.org/docs/rules/no-warning-comments)
 
 有时我们发现某个可能的 bug，但因为一些原因还没法修复；或者某个地方还有一些待完成的功能，这时我们需要使用相应的特殊标记注释来告知未来的自己或合作者。最常用的特殊标记有两种：
 
@@ -2620,7 +2620,7 @@ class Calculator extends Abacus {
 
 - 【参考】文档类注释使用 <Strong>jsdoc</Strong> 规范。
 
-文档类注释，如函数、类、文件、事件等，推荐使用 [jsdoc](https://jsdoc.app/?spm=a2o8t.11089562.0.0.4b006654hMwTy5) 规范或类 <Strong>jsdoc</Strong> 的规范。
+文档类注释，如函数、类、文件、事件等，推荐使用 [jsdoc](https://jsdoc.app/) 规范或类 <Strong>jsdoc</Strong> 的规范。
 
 例如：
 
@@ -2675,7 +2675,7 @@ const thisIsMyObject = {};
 function thisIsMyFunction() {}
 ```
 
-- 【必要】使用大驼峰（<Strong>PascalCase</Strong>）命名类和构造函数。eslint: [new-cap](https://eslint.org/docs/rules/new-cap?spm=a2o8t.11089562.0.0.4b006654gJ7qoh)
+- 【必要】使用大驼峰（<Strong>PascalCase</Strong>）命名类和构造函数。eslint: [new-cap](https://eslint.org/docs/rules/new-cap)
 
 ```js
 // bad
@@ -2781,7 +2781,7 @@ import CheckBox from './CheckBox'; // PascalCase export/import/filename
 import fortyTwo from './fortyTwo'; // camelCase export/import/filename
 ```
 
-- 【参考】命名不要以下划线开头或结尾。eslint: [no-underscore-dangle](https://eslint.org/docs/rules/no-underscore-dangle?spm=a2o8t.11089562.0.0.4b006654otBuhS)
+- 【参考】命名不要以下划线开头或结尾。eslint: [no-underscore-dangle](https://eslint.org/docs/rules/no-underscore-dangle)
 
 JS 没有私有属性或私有方法的概念，这样的命名可能会让人误解。
 
@@ -2831,7 +2831,7 @@ function example() {
 
 即便如此，我们还是推荐在变量使用前再进行声明，而不是统一在作用域开始处声明，以增强可读性。当然，如果你担心声明提升问题会带来隐患，也可以选择统一在作用域开始处进行声明。
 
-不要在声明前就使用变量，这样做可能给人带来疑惑和隐患。eslint: [no-use-before-define](https://eslint.org/docs/rules/no-use-before-define.html?spm=a2o8t.11089562.0.0.4b006654AVYuIg)
+不要在声明前就使用变量，这样做可能给人带来疑惑和隐患。eslint: [no-use-before-define](https://eslint.org/docs/rules/no-use-before-define.html)
 
 ```js
 // bad
@@ -2843,7 +2843,7 @@ var foo = 'foo';
 console.log(foo); // => foo
 ```
 
-- 【必要】对于逗号分隔的多行结构，不要加上最后一个行末逗号。eslint: [comma-dangle](https://eslint.org/docs/rules/comma-dangle?spm=a2o8t.11089562.0.0.4b0066545trr3e)
+- 【必要】对于逗号分隔的多行结构，不要加上最后一个行末逗号。eslint: [comma-dangle](https://eslint.org/docs/rules/comma-dangle)
 
 这样做会在 IE6/7 和 IE9 怪异模式下引起问题。另外，多余的逗号在某些 ES3 的实现里会增加数组的长度。
 
@@ -2889,7 +2889,7 @@ function trigger() {
 
 - 【推荐】不要使用保留字作为对象的属性名。
 
-不要使用[保留字](http://es5.github.io/?spm=a2o8t.11089562.0.0.4b006654d9VauB#x7.6.1)作为对象的属性名，它们在 IE8 中不工作
+不要使用[保留字](http://es5.github.io/#x7.6.1)作为对象的属性名，它们在 IE8 中不工作
 
 ```js
 // bad
@@ -2909,8 +2909,8 @@ var superman = {
 
 ## 参考资料
 
-[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript?spm=a2o8t.11089562.0.0.4b006654DReZK9)
+[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
-[Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html?spm=a2o8t.11089562.0.0.4b006654xxYcyt)
+[Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
 
-[ESLint rules](https://eslint.org/docs/rules/?spm=a2o8t.11089562.0.0.4b006654LAUsxf)
+[ESLint rules](https://eslint.org/docs/rules/)

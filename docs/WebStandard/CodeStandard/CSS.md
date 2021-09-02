@@ -233,7 +233,7 @@ background-image: -webkit-gradient(
 
 - 【推荐】不要使用 id 选择器。stylelint: [selector-max-id](http://stylelint.docschina.org/user-guide/rules/selector-max-id/)
 
-id 会带来过高的[选择器优先级](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity?spm=a2o8t.11089562.0.0.20756654QinpUC)，使得后续很难进行样式覆盖（继而引发使用 <Strong>!important</Strong> 覆盖样式的恶性循环）。
+id 会带来过高的[选择器优先级](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)，使得后续很难进行样式覆盖（继而引发使用 <Strong>!important</Strong> 覆盖样式的恶性循环）。
 
 ```css
 /* bad */
@@ -255,7 +255,7 @@ id 会带来过高的[选择器优先级](https://developer.mozilla.org/en-US/do
 
 - 【参考】属性选择器的值始终用双引号包裹。stylelint: [selector-attribute-quotes](http://stylelint.docschina.org/user-guide/rules/selector-attribute-quotes/)
 
-属性选择器的值的引号只有在[某些情况下](https://mathiasbynens.be/notes/unquoted-attribute-values?spm=a2o8t.11089562.0.0.20756654v6IFne#css)可以省略。
+属性选择器的值的引号只有在[某些情况下](https://mathiasbynens.be/notes/unquoted-attribute-values#css)可以省略。
 
 ```css
 /* bad */
@@ -281,7 +281,7 @@ input[type="text"] {
 
 ### 属性和属性值
 
-- 【强制】使用尽可能短的十六进制值。stylelint: [color-hex-length](http://stylelint.docschina.org/user-guide/rules/color-hex-length/)
+- 【必要】使用尽可能短的十六进制值。stylelint: [color-hex-length](http://stylelint.docschina.org/user-guide/rules/color-hex-length/)
 
 ```css
 /* bad */
@@ -579,7 +579,7 @@ $my-variable: #f0f0f0;
 
 （1）与 HTML 结构强耦合，难以复用
 
-（2）过高的[选择器优先级](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity?spm=a2o8t.11089562.0.0.207566543dwQCt)
+（2）过高的[选择器优先级](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
 
 ```scss
 .container {
@@ -632,10 +632,10 @@ $my-variable: #f0f0f0;
 
 ## 参考资料
 
-[Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css?spm=a2o8t.11089562.0.0.2075665445AK72)
+[Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css)
 
-[Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html?spm=a2o8t.11089562.0.0.20756654mCqxEK)
+[Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
 
-[spec css-style-guide](https://github.com/ecomfe/spec/blob/master/css-style-guide.md?spm=a2o8t.11089562.0.0.20756654odK3YQ&file=css-style-guide.md)
+[spec css-style-guide](https://github.com/ecomfe/spec/blob/master/css-style-guide.md?file=css-style-guide.md)
 
 [stylelint中文文档](http://stylelint.docschina.org/)

@@ -33,7 +33,7 @@
 
 > 推荐开发者在 <Strong>html</Strong> 元素上指定 <Strong>lang</Strong> 属性，以指出文档的语言。这有助于读屏、翻译等工具的工作。
 
-<Strong>lang</Strong> 属性的值由 <Strong>language-subtags</Strong> 组成，在 [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt?spm=a2o8t.11089562.0.0.39536654KwDOrm&file=bcp47.txt) 中定义，[了解更多](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang?spm=a2o8t.11089562.0.0.39536654lfgbRG)。
+<Strong>lang</Strong> 属性的值由 <Strong>language-subtags</Strong> 组成，在 [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt?&file=bcp47.txt) 中定义，[了解更多](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)。
 
 ```html
 <html lang="zh-CN">
@@ -57,9 +57,9 @@
 </head>
 ```
 
-- 【推荐】页面提供给移动设备使用时，需要设置 [viewport](https://drafts.csswg.org/css-device-adapt/?spm=a2o8t.11089562.0.0.39536654l4Nt3H#viewport-meta)。
+- 【推荐】页面提供给移动设备使用时，需要设置 [viewport](https://drafts.csswg.org/css-device-adapt/#viewport-meta)。
 
-设置 viewport-fit 设置为“cover”来兼容 iPhone X 的刘海屏，[了解更多](https://webkit.org/blog/7929/designing-websites-for-iphone-x/?spm=a2o8t.11089562.0.0.39536654EirAL9)。
+设置 viewport-fit 设置为“cover”来兼容 iPhone X 的刘海屏，[了解更多](https://webkit.org/blog/7929/designing-websites-for-iphone-x/)。
 
 ```html
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, viewport-fit=cover" />
@@ -87,9 +87,9 @@
 
 - 【推荐】在 head 标签内引入 CSS，在 body 结束标签前引入 JS。
 
-在 <Strong>&lt;body&gt;&lt;/body&gt;</Strong> 中指定外部样式表和嵌入式样式块可能会导致页面的重排和重绘，对页面的渲染造成影响。因此，一般情况下，CSS 应在 <Strong>&lt;head&gt;&lt;/head&gt;</Strong> 标签里引入，[了解更多](https://developer.yahoo.com/performance/rules.html?spm=a2o8t.11089562.0.0.39536654yMq7H8&guccounter=1&guce_referrer=aHR0cHM6Ly9mMmUuYWxpYmFiYS1pbmMuY29tLw&guce_referrer_sig=AQAAAHM3yZxKer2V1HBeuLrC-XtxlpfKy6wF0dU1WTE7jAp00VPgu0ZmJa2efsold-Egk_nc15CuQvHChItcMmMGMNoAnn1jPNp1q3sysUinRzYKBlLPKrgIDF856LEa17mwhskR7pMfzfyETW3LhWS-7EDvaDEmQROkXBnz7EK4kokv#css_top)。
+在 <Strong>&lt;body&gt;&lt;/body&gt;</Strong> 中指定外部样式表和嵌入式样式块可能会导致页面的重排和重绘，对页面的渲染造成影响。因此，一般情况下，CSS 应在 <Strong>&lt;head&gt;&lt;/head&gt;</Strong> 标签里引入，[了解更多](https://developer.yahoo.com/performance/rules.html?&guccounter=1&guce_referrer=aHR0cHM6Ly9mMmUuYWxpYmFiYS1pbmMuY29tLw&guce_referrer_sig=AQAAAHM3yZxKer2V1HBeuLrC-XtxlpfKy6wF0dU1WTE7jAp00VPgu0ZmJa2efsold-Egk_nc15CuQvHChItcMmMGMNoAnn1jPNp1q3sysUinRzYKBlLPKrgIDF856LEa17mwhskR7pMfzfyETW3LhWS-7EDvaDEmQROkXBnz7EK4kokv#css_top)。
 
-除了基础库等必须要在 DOM 加载之前运行的 JavaScript 脚本，其他都在靠近 <Strong>body</Strong> 结束标签前引入，以防止出现页面渲染的阻塞，[了解更多](https://developer.yahoo.com/performance/rules.html?spm=a2o8t.11089562.0.0.39536654Y6qrhQ#js_bottom)。
+除了基础库等必须要在 DOM 加载之前运行的 JavaScript 脚本，其他都在靠近 <Strong>body</Strong> 结束标签前引入，以防止出现页面渲染的阻塞，[了解更多](https://developer.yahoo.com/performance/rules.html#js_bottom)。
 
 ```html
 <!-- bad -->
@@ -147,7 +147,7 @@
 
 ### 页面标题
 
-- 【强制】页面需要指定 title 标签，有且仅有 1 个。
+- 【必要】页面需要指定 title 标签，有且仅有 1 个。
 
 ```html
 <head>
@@ -176,7 +176,7 @@
 ```
 
 ### 注释
-- 【强制】在 HTML 注释代码中，不允许出现任何敏感信息。
+- 【必要】在 HTML 注释代码中，不允许出现任何敏感信息。
 
 常见的敏感信息包括：
 
@@ -207,7 +207,7 @@
 
 ### 标签
 
-- 【强制】标签名统一使用小写。
+- 【必要】标签名统一使用小写。
 
 ```html
 <!-- bad -->
@@ -219,9 +219,9 @@
 
 - 【推荐】不要省略自闭合标签结尾处的斜线，且斜线前需留有一个空格。
 
-虽然 [HTML5](https://html.spec.whatwg.org/multipage/?spm=a2o8t.11089562.0.0.39536654QcQoPq#syntax-start-tag) 规范 中指出结尾的斜线是可选的，但保留它们可以明确表达该标签已闭合的语义，更易于维护和理解。
+虽然 [HTML5](https://html.spec.whatwg.org/multipage/#syntax-start-tag) 规范 中指出结尾的斜线是可选的，但保留它们可以明确表达该标签已闭合的语义，更易于维护和理解。
 
-同时，在 React 被广泛使用的今天，这与 [JSX 的规范](https://react-cn.github.io/react/tips/self-closing-tag.html?spm=a2o8t.11089562.0.0.395366543A6L0Q) 相一致，JSX 中自闭合标签必须保留结尾的斜线。
+同时，在 React 被广泛使用的今天，这与 [JSX 的规范](https://react-cn.github.io/react/tips/self-closing-tag.html) 相一致，JSX 中自闭合标签必须保留结尾的斜线。
 
 ```html
 <!-- bad -->
@@ -235,7 +235,7 @@
 
 ### 属性
 
-- 【强制】属性值使用双引号，不要使用单引号。
+- 【必要】属性值使用双引号，不要使用单引号。
 
 ```html
 <!-- bad -->
@@ -310,9 +310,9 @@ class 和 id 的命名规则为：
 
 - 【参考】尽量根据语义使用 HTML 标签。
 
-HTML 标签（更严谨的叫法是 HTML 元素）都有其语义，例如 <Strong>p</Strong> 标签即“paragraphs”用于章节，<Strong>a</Strong> 标签即“anchors”用于锚点链接，[了解更多](https://www.w3.org/TR/2018/WD-html53-20181018/fullindex.html?spm=a2o8t.11089562.0.0.39536654wIp8zq#index-elements)。
+HTML 标签（更严谨的叫法是 HTML 元素）都有其语义，例如 <Strong>p</Strong> 标签即“paragraphs”用于章节，<Strong>a</Strong> 标签即“anchors”用于锚点链接，[了解更多](https://www.w3.org/TR/2018/WD-html53-20181018/fullindex.html#index-elements)。
 
-我们应优先选取符合当下所需语义的标签，既有助于[可访问性（Accessibility）](https://developer.mozilla.org/zh-CN/docs/learn/Accessibility?spm=a2o8t.11089562.0.0.39536654huP1QU)，也可以在 CSS 加载失败时获得较好的展示效果。
+我们应优先选取符合当下所需语义的标签，既有助于[可访问性（Accessibility）](https://developer.mozilla.org/zh-CN/docs/learn/Accessibility)，也可以在 CSS 加载失败时获得较好的展示效果。
 
 ```html
 <!-- bad -->
@@ -352,7 +352,7 @@ HTML 标签（更严谨的叫法是 HTML 元素）都有其语义，例如 <Stro
 <img src="logo.jpg" role="presentation" />
 ```
 
-了解更多 HTML 可访问性的知识，可以阅读这篇 [MDN](https://developer.mozilla.org/zh-CN/docs/learn/Accessibility?spm=a2o8t.11089562.0.0.395366541fVvhr) 的文章。
+了解更多 HTML 可访问性的知识，可以阅读这篇 [MDN](https://developer.mozilla.org/zh-CN/docs/learn/Accessibility) 的文章。
 
 ## 总结
 
@@ -378,4 +378,4 @@ HTML 标签（更严谨的叫法是 HTML 元素）都有其语义，例如 <Stro
 
 ## 参考资料
 
-[Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html?spm=a2o8t.11089562.0.0.39536654nd2WrE)
+[Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html)
