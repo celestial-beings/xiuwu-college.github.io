@@ -33,7 +33,9 @@
 
 > 推荐开发者在 <Strong>html</Strong> 元素上指定 <Strong>lang</Strong> 属性，以指出文档的语言。这有助于读屏、翻译等工具的工作。
 
-<Strong>lang</Strong> 属性的值由 <Strong>language-subtags</Strong> 组成，在 [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt?&file=bcp47.txt) 中定义，[了解更多](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)。
+<Strong>lang</Strong> 属性的值由 <Strong>language-subtags</Strong> 组成。
+
+在 [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt?file=bcp47.txt) 中定义，[了解更多](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang)。
 
 ```html
 <html lang="zh-CN">
@@ -87,7 +89,7 @@
 
 - 【推荐】在 head 标签内引入 CSS，在 body 结束标签前引入 JS。
 
-在 <Strong>&lt;body&gt;&lt;/body&gt;</Strong> 中指定外部样式表和嵌入式样式块可能会导致页面的重排和重绘，对页面的渲染造成影响。因此，一般情况下，CSS 应在 <Strong>&lt;head&gt;&lt;/head&gt;</Strong> 标签里引入，[了解更多](https://developer.yahoo.com/performance/rules.html?&guccounter=1&guce_referrer=aHR0cHM6Ly9mMmUuYWxpYmFiYS1pbmMuY29tLw&guce_referrer_sig=AQAAAHM3yZxKer2V1HBeuLrC-XtxlpfKy6wF0dU1WTE7jAp00VPgu0ZmJa2efsold-Egk_nc15CuQvHChItcMmMGMNoAnn1jPNp1q3sysUinRzYKBlLPKrgIDF856LEa17mwhskR7pMfzfyETW3LhWS-7EDvaDEmQROkXBnz7EK4kokv#css_top)。
+在 <Strong>&lt;body&gt;&lt;/body&gt;</Strong> 中指定外部样式表和嵌入式样式块可能会导致页面的重排和重绘，对页面的渲染造成影响。因此，一般情况下，CSS 应在 <Strong>&lt;head&gt;&lt;/head&gt;</Strong> 标签里引入，[了解更多](https://developer.yahoo.com/performance/rules.html#css_top)。
 
 除了基础库等必须要在 DOM 加载之前运行的 JavaScript 脚本，其他都在靠近 <Strong>body</Strong> 结束标签前引入，以防止出现页面渲染的阻塞，[了解更多](https://developer.yahoo.com/performance/rules.html#js_bottom)。
 

@@ -2466,7 +2466,7 @@ const utils = {
 utils.log('Some debug messages..');
 ```
 
-- 【必要】禁止对原生对象或只读的全局对象进行赋值。eslint: [no-global-assign]()
+- 【必要】禁止对原生对象或只读的全局对象进行赋值。eslint: [no-global-assign](https://eslint.org/docs/rules/no-global-assign)
 
 JS 执行环境中会包含一些全局变量和原生对象，如浏览器环境中的 <Strong>window</Strong>，<Strong>node</Strong> 环境中的 <Strong>global</Strong> 、<Strong>process</Strong>，<Strong>Object</Strong>，<Strong>undefined</Strong> 等。除了像 <Strong>window</Strong> 这样的众所周知的对象，JS 还提供了数百个内置全局对象，你可能在定义全局变量时无意对它们进行了重新赋值，因此最好的做法是不要定义全局变量。
 
